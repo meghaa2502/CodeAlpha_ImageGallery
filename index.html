@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1> Image Gallery</h1>
+
+    
+    <div class="filters">
+        <button onclick="filterImages('all')">All</button>
+        <button onclick="filterImages('nature')">Nature</button>
+        <button onclick="filterImages('archietecture')">Archietecture</button>
+        <button onclick="filterImages('city')">City</button>
+        <button onclick="filterImages('food')">Food</button>
+    </div>
+
+    <div class="gallery">
+
+        <img src="images/nature-1.jpeg"
+             class="gallery-item nature"
+             onclick="openLightbox(0)">
+
+        <img src="images/nature-2.jpeg"
+             class="gallery-item nature"
+             onclick="openLightbox(1)">
+
+        <img src="images/nature-3.jpeg"
+             class="gallery-item nature"
+             onclick="openLightbox(2)">    
+
+        <img src="images/nature-4.jpeg"
+             class="gallery-item nature"
+             onclick="openLightbox(4)">
+
+        <img src="images/archietecture-1.jpeg"
+             class="gallery-item archietecture"
+             onclick="openLightbox(5)">  
+             
+        <img src="images/archietecture-2.jpeg"
+             class="gallery-item archietecture"
+             onclick="openLightbox(6)">
+        
+        <img src="images/archietecture-3.jpeg"
+             class="gallery-item archietecture"
+             onclick="openLightbox(7)">    
+        
+        <img src="images/archietecture-4.jpeg"
+             class="gallery-item archietecture"
+             onclick="openLightbox(8)"> 
+             
+        <img src="images/city-1.jpeg"
+             class="gallery-item city"
+             onclick="openLightbox(9)">   
+             
+        <img src="images/city-2.jpeg"
+             class="gallery-item city"
+             onclick="openLightbox(10)">
+             
+        <img src="images/city-3.jpeg"
+             class="gallery-item city"
+             onclick="openLightbox(11)">
+             
+        <img src="images/city-4.jpeg"
+             class="gallery-item city"
+             onclick="openLightbox(12)">
+         
+        <img src="images/food-1.jpeg"
+             class="gallery-item food"
+             onclick="openLightbox(13)">   
+        
+        <img src="images/food-2.jpeg"
+             class="gallery-item food"
+             onclick="openLightbox(14)"> 
+             
+        <img src="images/food-3.jpeg"
+             class="gallery-item food"
+             onclick="openLightbox(15)">   
+             
+        <img src="images/food-4.jpeg"
+             class="gallery-item food"
+             onclick="openLightbox(16)">      
+
+    </div>
+
+   
+
+    <div id="lightbox">
+
+        <span class="close" onclick="closeLightbox()">&times;</span>
+
+        <button class="prev" onclick="changeImage(-1)">❮</button>
+
+        <img id="lightbox-img" src="" alt="">
+
+        <button class="next" onclick="changeImage(1)">❯</button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
